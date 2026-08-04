@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Rabutaro 🤍</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Patrick+Hand&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Floating Background Effects -->
+<div id="sparkles"></div>
+<div id="petals"></div>
+<div id="floatingHearts"></div>
+<div id="butterflies"></div>
+
+<!-- Audio -->
+<audio id="bgMusic" loop>
+<source src="Music/background.mp3" type="audio/mpeg">
+</audio>
+<audio id="walletMusic">
+<source src="Music/wallet.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+<div class="book">
+<div class="sticker">🎀</div>
+<h1 class="mainTitle">Happy Birthday</h1>
+<h2 class="nameTitle">Rabutaro 🤍</h2>
+<p class="intro">
+Welcome, Detective.<br>
+This scrapbook has been protected by Sabutaro's Secret Security System.<br>
+Only one special person knows the password.
+</p>
+<div class="lockCard">
+<div class="lockEmoji">🔒</div>
+<input id="password" type="password" maxlength="4" placeholder="Enter Password">
+<button id="unlockBtn">Unlock Scrapbook</button>
+<button id="hintBtn">Need A Hint?</button>
+<p id="hintText"></p>
+<p id="errorText"></p>
+</div>
+<p class="bottomQuote">"Some friendships deserve a password."</p>
+</div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+<div class="book">
+<h1>Welcome Mrs. Bunny 🐰</h1>
+<div class="polaroid">
+<img src="Photos/Favorite.jpg" alt="Favourite Photo">
+<p>My Favourite Human 🤍</p>
+</div>
+<p>
+Congratulations.<br>
+You unlocked Sabutaro's secret scrapbook.<br>
+This isn't just a birthday website.<br>
+It's a journey through memories, games, missions, and surprises made only for you. ✨
+</p>
+<button id="startAdventure">Begin Adventure →</button>
+</div>
+</section>
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+<div class="book fbi">
+<div class="stamp">TOP SECRET</div>
+<h1>🕵 FBI CASE</h1>
+<p>
+Attention Agent Rabutaro...<br>
+You have been accused of:<br>
+💘 Stealing Sabutaro's heart<br>
+😂 Laughing too much<br>
+🐰 Being illegally adorable<br>
+📸 Creating unforgettable memories<br>
+Do you wish to continue the investigation?
+</p>
+<button id="investigateBtn">Start Investigation 🔍</button>
+</div>
+</section>
+
+<!-- PAGE 4 - FBI SCANNER -->
+<section class="page" id="page4">
+<div class="book fbi">
+<h1>🖥 FBI Identity Scanner</h1>
+<p>Scanning suspect... Please wait while the FBI verifies the identity.</p>
+<div class="scanner">
+<div id="scanLine"></div>
+<img src="Photos/Favorite.jpg" class="scanPhoto" alt="Rabiya">
+</div>
+<button id="scanBtn">Start Scan 🔍</button>
+<div id="scanResult">Waiting...</div>
+</div>
+</section>
+
+<!-- PAGE 5 - FBI REPORT -->
+<section class="page" id="page5">
+<div class="book">
+<h1>📋 Investigation Report</h1>
+<div class="report">
+<p><b>Name:</b> Rabiya Khan</p>
+<p><b>Alias:</b> Rabutaro 🐰</p>
+<p><b>Status:</b> Sabutaro's Favourite Human 🤍</p>
+<p><b>Wanted Since:</b> 2018</p>
+<p><b>Threat Level:</b> Extremely Cute</p>
+<p><b>Heart Theft Cases:</b> ∞</p>
+</div>
+<button id="chargesBtn">View Charges →</button>
+</div>
+</section>
+
+<!-- PAGE 6 - CHARGE SHEET -->
+<section class="page" id="page6">
+<div class="book">
+<h1>⚖ Official Charge Sheet</h1>
+<div class="chargeList">
+<div class="charge">💘 Stealing Sabutaro's Heart</div>
+<div class="charge">😂 Excessive Laughing</div>
+<div class="charge">🐰 Being Mrs. Bunny</div>
+<div class="charge">📸 Taking Too Many Cute Photos</div>
+<div class="charge">🍜 Ramen Addiction</div>
+<div class="charge">🌸 Creating Core Memories</div>
+<div class="charge">🤍 Becoming Irreplaceable</div>
+</div>
+<button id="courtBtn">Take Me To Court →</button>
+</div>
+</section>
+
+<!-- PAGE 7 - FRIENDSHIP COURT -->
+<section class="page" id="page7">
+<div class="book">
+<h1>👨‍⚖ Friendship Court</h1>
+<div class="verdict">🏆 GUILTY<br><br>Of being the World's Best Best Friend.</div>
+<p>Punishment:<br>Lifetime friendship with Sabutaro.<br>No appeals allowed. 🤍</p>
+<button id="oracleBtn">Consult Divine Oracle 🔮</button>
+</div>
+</section>
+
+<!-- PAGE 8 - DIVINE ORACLE -->
+<section class="page" id="page8">
+<div class="book">
+<h1>🔮 Divine Oracle</h1>
+<div id="crystalBall">🔮</div>
+<p>The Oracle already knows your destiny...</p>
+<button id="oracleAskBtn">Reveal Destiny</button>
+<div id="oracleText">...</div>
+</div>
+</section>
+
+<!-- PAGE 9 - SECRET WALLET -->
+<section class="page" id="page9">
+<div class="book">
+<h1>👛 Secret Wallet</h1>
+<p>Long press the wallet for 2 seconds.<br>Something precious is hidden inside... 🤍</p>
+<div id="wallet">👛</div>
+<p>(Hold to Open)</p>
+</div>
+</section>
+
+<!-- PAGE 10 - WALLET PHOTO -->
+<section class="page" id="page10">
+<div class="book">
+<h1>🤍 Guess Who Lives Here?</h1>
+<div class="polaroid large">
+<img src="Photos/Photo1.jpg" alt="Photo">
+<p>The person Sabutaro keeps closest. 🐰</p>
+</div>
+<p>Every wallet has money... Mine has memories. And somehow... you're one of the most valuable ones. 🤍</p>
+<button id="scrapbookBtn">Open Scrapbook 📖</button>
+</div>
+</section>
+
+<!-- PAGE 11 - SCRAPBOOK -->
+<section class="page" id="page11">
+<div class="book">
+<h1>📖 Our Scrapbook</h1>
+<p>Double tap any picture for a surprise. 🤍</p>
+<div class="scrapbookGrid">
+<div class="polaroid"><img src="Photos/Photo2.jpg" alt="Photo 2"><p>Core Memory 🌸</p></div>
+<div class="polaroid rotateLeft"><img src="Photos/Photo3.jpg" alt="Photo 3"><p>Favourite Selfie 📸</p></div>
+<div class="polaroid rotateRight"><img src="Photos/Photo4.jpg" alt="Photo 4"><p>Mrs. Bunny 🐰</p></div>
+<div class="polaroid"><img src="Photos/Photo5.jpg" alt="Photo 5"><p>Forever 🤍</p></div>
+</div>
+<button id="collageBtn">More Memories →</button>
+</div>
+</section>
+
+<!-- PAGE 12 - PINTEREST -->
+<section class="page" id="page12">
+<div class="book">
+<h1>🌸 Pinterest Memories</h1>
+<div class="pinterestGrid">
+<img src="Photos/Photo6.jpg" alt="Photo 6"><img src="Photos/Photo7.jpg" alt="Photo 7">
+<img src="Photos/Photo8.jpg" alt="Photo 8"><img src="Photos/Photo9.jpg" alt="Photo 9">
+<img src="Photos/Photo10.jpg" alt="Photo 10"><img src="Photos/Photo11.jpg" alt="Photo 11">
+</div>
+<div class="cuteQuote">"If happiness had a gallery... it would look exactly like this." 🤍</div>
+<button id="bunnyBtn">Play A Game 🐰</button>
+</div>
+</section>
+
+<!-- PAGE 13 - FIND MRS BUNNY -->
+<section class="page" id="page13">
+<div class="book">
+<h1>🐰 Find Mrs. Bunny</h1>
+<p>Only one bunny is Rabutaro. Find her!</p>
+<div class="bunnyGrid">
+<div class="bunny">🐰</div><div class="bunny">🐇</div><div class="bunny correctBunny">🐰</div>
+<div class="bunny">🐇</div><div class="bunny">🐰</div><div class="bunny">🐇</div>
+<div class="bunny">🐰</div><div class="bunny">🐇</div><div class="bunny">🐰</div>
+</div>
+<p id="bunnyMessage"></p>
+<button id="balloonBtn">Next Game →</button>
+</div>
+</section>
+
+<!-- PAGE 14 - BALLOONS -->
+<section class="page" id="page14">
+<div class="book">
+<h1>🎈 Pop The Balloons</h1>
+<p>Every balloon hides a sweet message.</p>
+<div class="balloonArea">
+<div class="balloon" data-message="🤍 You make every moment brighter!">🎈</div>
+<div class="balloon" data-message="🐰 Our inside jokes are legendary!">🎈</div>
+<div class="balloon" data-message="🌸 Besties for life and after!">🎈</div>
+<div class="balloon" data-message="📸 Always smiling with you!">🎈</div>
+<div class="balloon" data-message="🍜 Ramen dates are the best!">🎈</div>
+<div class="balloon" data-message="✨ My absolute favourite human!">🎈</div>
+</div>
+<p id="balloonMessage">Start popping! 🤍</p>
+<button id="memoryBtn">Continue →</button>
+</div>
+</section>
+
+<!-- PAGE 15 - MEMORY MATCH -->
+<section class="page" id="page15">
+<div class="book">
+<h1>🧠 Memory Match</h1>
+<p>Match all the memories!</p>
+<div class="memoryGrid">
+<div class="memoryCard" data-card="🤍"></div><div class="memoryCard" data-card="🐰"></div>
+<div class="memoryCard" data-card="🌸"></div><div class="memoryCard" data-card="📸"></div>
+<div class="memoryCard" data-card="🐰"></div><div class="memoryCard" data-card="📸"></div>
+<div class="memoryCard" data-card="🤍"></div><div class="memoryCard" data-card="🌸"></div>
+</div>
+<p id="memoryMessage">Find every matching pair.</p>
+<button id="quizBtn">Friendship Quiz →</button>
+</div>
+</section>
+
+<!-- PAGE 16 - FRIENDSHIP QUIZ -->
+<section class="page" id="page16">
+<div class="book">
+<h1>📝 Friendship Quiz</h1>
+<p>Let's see how well you know us... 🤍</p>
+<div id="quizContainer"></div>
+<p id="quizResult"></p>
+<button id="chatBtn">Continue 💬</button>
+</div>
+</section>
+
+<!-- PAGE 17 - WHATSAPP -->
+<section class="page" id="page17">
+<div class="book">
+<h1>💬 WhatsApp</h1>
+<div class="chatWindow">
+<div class="msg left">Sabutarooo 🐰</div>
+<div class="msg right">Yessss? 🤍</div>
+<div class="msg left">Happy Birthday!!</div>
+<div class="msg right">Awwwww 😭🤍</div>
+<div class="msg left">Ready for another surprise?</div>
+<div class="msg right">Always 😎</div>
+</div>
+<button id="instagramBtn">Open Instagram 📷</button>
+</div>
+</section>
+
+<!-- PAGE 18 - INSTAGRAM -->
+<section class="page" id="page18">
+<div class="book">
+<h1>📷 Instagram</h1>
+<div class="instaPost">
+<img src="Photos/Photo12.jpg" alt="Insta Post">
+<h3>@sabutaro</h3>
+<p>Happy Birthday to my favourite human. 🤍🐰</p>
+<div class="likes">❤️ <span id="likeCount">1313</span> Likes</div>
+<button id="likeBtn">❤️ Like</button>
+<div class="comments">
+<p><b>FBI:</b> Still under investigation 😂</p>
+<p><b>Oracle:</b> Friendship approved 🔮</p>
+<p><b>Allah:</b> May your friendship stay blessed. 🤍</p>
+</div>
+</div>
+<button id="googlePageBtn">Google Surprise 🔍</button>
+</div>
+</section>
+
+<!-- PAGE 19 - GOOGLE -->
+<section class="page" id="page19">
+<div class="book">
+<h1>🔍 Google</h1>
+<p>Search anything...</p>
+<input id="googleInput" type="text" placeholder="Search here...">
+<button id="googleBtn">Search</button>
+<div id="googleResult"></div>
+<button id="wheelBtn">Spin The Wheel 🎡</button>
+</div>
+</section>
+
+<!-- PAGE 20 - WHEEL -->
+<section class="page" id="page20">
+<div class="book">
+<h1>🎡 Wheel Of Memories</h1>
+<p>Tap the wheel!</p>
+<div id="memoryWheel">🎡</div>
+<p id="wheelResult">Good Luck 🤍</p>
+<button id="giftBtn">Choose A Gift 🎁</button>
+</div>
+</section>
+
+<!-- PAGE 21 - GIFT GAME -->
+<section class="page" id="page21">
+<div class="book">
+<h1>🎁 Choose The Correct Gift</h1>
+<p>Only one gift belongs to Rabutaro!</p>
+<div class="giftGrid">
+<div class="gift">🎁</div><div class="gift">🎁</div><div class="gift correctGift">🎁</div>
+<div class="gift">🎁</div><div class="gift">🎁</div><div class="gift">🎁</div>
+</div>
+<p id="giftResult"></p>
+<button id="ribbonBtn">Open The Real Gift 🎀</button>
+</div>
+</section>
+
+<!-- PAGE 22 - PULL THE RIBBON -->
+<section class="page" id="page22">
+<div class="book">
+<h1>🎀 Pull The Ribbon</h1>
+<p>Pull the ribbon down to open your birthday gift! 🤍</p>
+<div id="giftBox">
+<div id="giftLid"></div>
+<div id="giftRibbon">🎀</div>
+<div id="giftBase">🎁</div>
+</div>
+<p>A surprise is waiting inside... ✨</p>
+</div>
+</section>
+
+<!-- PAGE 23 - SECRET LETTER -->
+<section class="page" id="page23">
+<div class="book">
+<h1>💌 A Letter For Rabutaro</h1>
+<p>Open the envelope...</p>
+<div id="envelope">
+<div id="envelopeTop"></div>
+<div id="letterPaper">
+<h2>My Dearest Rabutaro 🤍</h2>
+<p>
+Today isn't just your birthday.<br>
+It's another reminder that Allah blessed my life with someone as special as you.<br>
+Thank you for every laugh... every silly joke... every memory... every adventure... and for simply being YOU.<br>
+No matter what happens in life... you'll always have a place in my heart.<br><br>
+Love,<br>Sabutaro 🤍
+</p>
+</div>
+</div>
+<button id="memoryWallBtn">Memory Wall →</button>
+</div>
+</section>
+
+<!-- PAGE 24 - MEMORY WALL -->
+<section class="page" id="page24">
+<div class="book">
+<h1>📸 Memory Wall</h1>
+<p>Double tap photos to make hearts appear. 🤍</p>
+<div class="memoryWall">
+<img src="Photos/Photo13.jpg" alt="Photo 13"><img src="Photos/Photo14.jpg" alt="Photo 14">
+<img src="Photos/Photo15.jpg" alt="Photo 15"><img src="Photos/Photo16.jpg" alt="Photo 16">
+<img src="Photos/Photo17.jpg" alt="Photo 17"><img src="Photos/Photo18.jpg" alt="Photo 18">
+</div>
+<button id="certificateBtn">Friendship Certificate 🏆</button>
+</div>
+</section>
+
+<!-- PAGE 25 -->
+<section class="page" id="page25">
+<div class="book">
+<h1>🏆 Friendship Certificate</h1>
+<div class="certificate">
+<h2>Awarded To</h2>
+<h1>Rabutaro 🐰</h1>
+<p>
+✔ World's Best Best Friend<br>
+✔ Mrs. Bunny<br>
+✔ Favourite Human<br>
+✔ Certified Forever Bestie<br>
+✔ Infinite Love<br>
+✔ Unlimited Memories<br>🤍
+</p>
+</div>
+<button id="cakeBtn">Celebrate 🎂</button>
+</div>
+</section>
+
+<!-- PAGE 26 -->
+<section class="page" id="page26">
+<div class="book">
+<h1>🎂 Birthday Cake</h1>
+<p>Swipe across the cake to blow out the candles! ✨</p>
+<div id="cake">🎂</div>
+<p id="cakeMessage">Make a Wish 🤍</p>
+</div>
+</section>
+
+<!-- PAGE 27 -->
+<section class="page" id="page27">
+<div class="book">
+<h1>🌌 11:11 Wish</h1>
+<p>Tap every star. ✨</p>
+<div class="stars">
+<span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+<span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+</div>
+<div id="wishText">🤍</div>
+<button id="duaBtn">Continue →</button>
+</div>
+</section>
+
+<!-- PAGE 28 -->
+<section class="page" id="page28">
+<div class="book">
+<h1>🤲 A Dua For You</h1>
+<p>
+May Allah bless your life, protect you, guide you, grant you happiness, success, peace, good health, and endless smiles.<br>Ameen. 🤍
+</p>
+<button id="finalBtn">Final Letter →</button>
+</div>
+</section>
+
+<!-- PAGE 29 -->
+<section class="page" id="page29">
+<div class="book">
+<h1>💖 Happy Birthday Rabutaro</h1>
+<p>
+Thank you for every memory... every laugh... every late-night conversation... every adventure... and every moment we've shared.<br>
+No matter where life takes us, I'll always pray for your happiness.<br><br>
+Happy Birthday, Meri Jaanii.<br>Love, Sabutaro 🤍
+</p>
+<button id="grandFinaleBtn">Final Surprise 🎆</button>
+</div>
+</section>
+
+<!-- PAGE 30 -->
+<section class="page" id="page30">
+<div class="book finalBook">
+<h1>🎉 HAPPY BIRTHDAY 🎉</h1>
+<h2>Rabutaro 🤍</h2>
+<p>
+Thank you for playing through our little adventure.<br>
+This scrapbook was made with love, laughter, inside jokes, and countless memories.<br>
+You'll always be one of my favourite people.<br><br>
+Forever, Sabutaro 🤍
+</p>
+<div id="fireworks"></div>
+<div id="confetti"></div>
+<button id="replayBtn">🔄 Play Again</button>
+</div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
